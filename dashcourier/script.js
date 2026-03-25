@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 0) {
                 if (value.length <= 3) {
-                    value = `(${value}`;
+                    value = `(${value})`;
                 } else if (value.length <= 6) {
                     value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
                 } else {
