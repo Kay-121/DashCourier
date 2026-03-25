@@ -1246,8 +1246,9 @@ body {
 }
 
 .calculator-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 3rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -1259,6 +1260,8 @@ body {
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-lg);
     border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 600px;
 }
 
 .calculator-form h3 {
@@ -1275,6 +1278,8 @@ body {
     box-shadow: var(--shadow-lg);
     border: 1px solid rgba(0, 0, 0, 0.05);
     animation: slideIn 0.5s ease;
+    width: 100%;
+    max-width: 600px;
 }
 
 .result-header {
