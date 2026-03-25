@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - SwiftCom Telecommunications</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="index.html" aria-label="SwiftCom homepage">SwiftCom</a></h1>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li aria-current="page">Services</li>
+                </ol>
+            </div>
+        </nav>
+
+        <section class="page-header">
+            <div class="container">
+                <h2>Our Services</h2>
+                <p>Comprehensive telecommunications solutions tailored to your needs</p>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🌐</div>
+                        <h3>High-Speed Internet</h3>
+                        <p>Ultra-fast fiber-optic internet with speeds up to 10 Gbps. Perfect for streaming, gaming, and business operations.</p>
+                        <ul class="service-features">
+                            <li>Speeds from 100 Mbps to 10 Gbps</li>
+                            <li>No data caps or throttling</li>
+                            <li>24/7 network monitoring</li>
+                            <li>Professional installation</li>
+                        </ul>
+                        <div class="service-price">
+                            <span class="price">Starting at $49.99/month</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">📱</div>
+                        <h3>Mobile Plans</h3>
+                        <p>Flexible mobile phone plans with nationwide coverage and unlimited options to keep you connected everywhere.</p>
+                        <ul class="service-features">
+                            <li>Unlimited talk, text, and data</li>
+                            <li>5G network access</li>
+                            <li>International roaming options</li>
+                            <li>Family plan discounts</li>
+                        </ul>
+                        <div class="service-price">
+                            <span class="price">Starting at $39.99/month</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">☎️</div>
+                        <h3>Business Phone Systems</h3>
+                        <p>Professional VoIP phone solutions for businesses of all sizes with advanced features and reliability.</p>
+                        <ul class="service-features">
+                            <li>Cloud-based PBX systems</li>
+                            <li>Auto-attendant and voicemail</li>
+                            <li>Conference calling capabilities</li>
+                            <li>Call analytics and reporting</li>
+                        </ul>
+                        <div class="service-price">
+                            <span class="price">Starting at $29.99/month</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">📺</div>
+                        <h3>Digital TV Services</h3>
+                        <p>Premium television entertainment with hundreds of channels, on-demand content, and 4K streaming.</p>
+                        <ul class="service-features">
+                            <li>200+ HD channels</li>
+                            <li>4K Ultra HD content</li>
+                            <li>On-demand library</li>
+                            <li>Cloud DVR included</li>
+                        </ul>
+                        <div class="service-price">
+                            <span class="price">Starting at $59.99/month</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🏢</div>
+                        <h3>Enterprise Solutions</h3>
+                        <p>Customized telecommunications infrastructure for large enterprises with dedicated support and SLAs.</p>
+                        <ul class="service-features">
+                            <li>Dedicated fiber connections</li>
+                            <li>SD-WAN solutions</li>
+                            <li>24/7 premium support</li>
+                            <li>Custom network design</li>
+                        </ul>
+                        <div class="service-price">
+                            <span class="price">Custom pricing</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🔒</div>
+                        <h3>Cybersecurity Services</h3>
+                        <p>Comprehensive security solutions to protect your network and data from modern threats.</p>
+                        <ul class="service-features">
+                            <li>Network security monitoring</li>
+                            <li>DDoS protection</li>
+                            <li>Firewall management</li>
+                            <li>Security audits</li>
+                        </ul>
+                        <div class="service-price">
+                            <span class="price">Starting at $99.99/month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tools-section services-tools" aria-labelledby="tools-title">
+            <div class="container">
+                <h2 id="tools-title">Service Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">📍</div>
+                            <h3>Coverage Checker</h3>
+                            <p>Check if SwiftCom services are available in your area</p>
+                        </div>
+                        <div class="tool-content">
+                            <form class="coverage-form" id="coverage-form">
+                                <div class="form-group">
+                                    <input type="text" id="zip-code" placeholder="Enter ZIP code" maxlength="5" pattern="[0-9]{5}" required aria-label="ZIP code">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Check Coverage</button>
+                            </form>
+                            <div class="coverage-result" id="coverage-result" style="display: none;">
+                                <div class="result-icon"></div>
+                                <div class="result-content">
+                                    <h4></h4>
+                                    <p></p>
+                                    <div class="available-services"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">💰</div>
+                            <h3>Pricing Calculator</h3>
+                            <p>Get an instant estimate for your custom service package</p>
+                        </div>
+                        <div class="tool-content">
+                            <form class="pricing-form" id="pricing-form">
+                                <div class="form-group">
+                                    <label>Internet Speed</label>
+                                    <select id="internet-speed">
+                                        <option value="0">No Internet</option>
+                                        <option value="49.99">Basic (100 Mbps) - $49.99/mo</option>
+                                        <option value="69.99">Standard (500 Mbps) - $69.99/mo</option>
+                                        <option value="99.99" selected>Premium (1 Gbps) - $99.99/mo</option>
+                                        <option value="149.99">Ultra (10 Gbps) - $149.99/mo</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Mobile Plan</label>
+                                    <select id="mobile-plan">
+                                        <option value="0">No Mobile</option>
+                                        <option value="39.99" selected>Unlimited Basic - $39.99/mo</option>
+                                        <option value="59.99">Unlimited Plus - $59.99/mo</option>
+                                        <option value="79.99">Unlimited Pro - $79.99/mo</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>TV Service</label>
+                                    <select id="tv-service">
+                                        <option value="0">No TV</option>
+                                        <option value="49.99">Basic Channels - $49.99/mo</option>
+                                        <option value="79.99" selected>Premium Channels - $79.99/mo</option>
+                                        <option value="119.99">Ultimate Package - $119.99/mo</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Business Phone</label>
+                                    <select id="business-phone">
+                                        <option value="0" selected>No Phone Service</option>
+                                        <option value="29.99">Basic Phone - $29.99/mo</option>
+                                        <option value="49.99">Business Phone - $49.99/mo</option>
+                                        <option value="89.99">Enterprise Phone - $89.99/mo</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Calculate Price</button>
+                            </form>
+                            <div class="pricing-result" id="pricing-result" style="display: none;">
+                                <div class="total-price">
+                                    <span class="price-label">Monthly Total:</span>
+                                    <span class="price-amount">$0.00</span>
+                                </div>
+                                <div class="price-breakdown">
+                                    <h4>Package Summary</h4>
+                                    <div class="breakdown-items"></div>
+                                    <div class="savings-info"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="plan-feature basic">
+                                        <div class="feature-content">
+                                            <span class="feature-value">Basic</span>
+                                            <span class="feature-badge">Standard</span>
+                                        </div>
+                                    </td>
+                                    <td class="plan-feature professional">
+                                        <div class="feature-content">
+                                            <span class="feature-value">Advanced</span>
+                                            <span class="feature-badge better">Enhanced</span>
+                                        </div>
+                                    </td>
+                                    <td class="plan-feature enterprise">
+                                        <div class="feature-content">
+                                            <span class="feature-value">Enterprise</span>
+                                            <span class="feature-badge best">Military-grade</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th class="total-column">
+                                        <div class="total-header">
+                                            <span class="total-icon">💰</span>
+                                            Monthly Total
+                                        </div>
+                                    </th>
+                                    <th class="plan-total basic">
+                                        <div class="total-content">
+                                            <span class="total-price">$29.99</span>
+                                            <span class="total-period">/month</span>
+                                        </div>
+                                    </th>
+                                    <th class="plan-total professional">
+                                        <div class="total-content">
+                                            <span class="total-price">$59.99</span>
+                                            <span class="total-period">/month</span>
+                                        </div>
+                                    </th>
+                                    <th class="plan-total enterprise">
+                                        <div class="total-content">
+                                            <span class="total-price">$99.99</span>
+                                            <span class="total-period">/month</span>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="comparison-summary" id="comparison-summary" style="display: none;">
+                    <h3>Comparison Summary</h3>
+                    <div class="summary-content">
+                        <p>Based on your selections, here's our recommendation:</p>
+                        <div class="recommendation-card">
+                            <h4 id="recommended-plan">Professional Plan</h4>
+                            <p id="recommendation-reason">Perfect balance of features and value for your needs.</p>
+                            <button class="btn btn-primary" onclick="selectRecommendedPlan()">Choose This Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h3>Ready to Get Started?</h3>
+                    <p>Contact our sales team to find the perfect solution for your needs</p>
+                    <a href="contact.html" class="btn btn-primary">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SwiftCom</h3>
+                    <p>Your trusted partner in telecommunications since 2008.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 1-800-SWIFTCOM</p>
+                    <p>📧 info@swiftcom.com</p>
+                    <p>📍 123 Tech Avenue, Silicon Valley, CA 94025</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SwiftCom. All rights reserved. Private Website.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        
+        // Check for saved dark mode preference
+        const savedDarkMode = localStorage.getItem('darkMode');
+        if (savedDarkMode === 'true') {
+            body.classList.add('dark-mode');
+        }
+        
+        // Toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+        });
+
+        // Coverage Checker Functionality
+        const coverageForm = document.getElementById('coverage-form');
+        const coverageResult = document.getElementById('coverage-result');
+        
+        coverageForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const zipCode = document.getElementById('zip-code').value;
+            
+            if (zipCode && zipCode.length === 5) {
+                // Show loading state
+                const submitBtn = this.querySelector('button[type="submit"]');
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
+                
+                // Simulate coverage check
+                setTimeout(() => {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+                    
+                    // Mock coverage data based on ZIP code
+                    const isCovered = parseInt(zipCode) % 2 === 0; // Even ZIPs are covered
+                    
+                    const resultIcon = coverageResult.querySelector('.result-icon');
+                    const resultTitle = coverageResult.querySelector('h4');
+                    const resultText = coverageResult.querySelector('p');
+                    const availableServices = coverageResult.querySelector('.available-services');
+                    
+                    if (isCovered) {
+                        resultIcon.innerHTML = '✅';
+                        resultTitle.textContent = 'Great News! SwiftCom is Available';
+                        resultText.textContent = `ZIP code ${zipCode} is in our service area with full coverage.`;
+                        availableServices.innerHTML = `
+                            <h5>Available Services:</h5>
+                            <ul>
+                                <li>🚀 Fiber Internet (up to 10 Gbps)</li>
+                                <li>📱 5G Mobile Service</li>
+                                <li>📺 Digital TV</li>
+                                <li>☎️ Business Phone Systems</li>
+                            </ul>
+                            <button class="btn btn-primary" onclick="showNotification('A representative will contact you soon!', 'success')">Get Started</button>
+                        `;
+                    } else {
+                        resultIcon.innerHTML = '❌';
+                        resultTitle.textContent = 'Service Not Yet Available';
+                        resultText.textContent = `ZIP code ${zipCode} is not currently in our service area.`;
+                        availableServices.innerHTML = `
+                            <h5>We're expanding! Expected coverage:</h5>
+                            <p>Coming to your area in Q3 2024</p>
+                            <button class="btn btn-secondary" onclick="showNotification('You\'ll be notified when service is available!', 'info')">Notify Me</button>
+                        `;
+                    }
+                    
+                    coverageResult.style.display = 'block';
+                    coverageResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 1500);
+            }
+        });
+
+        // Pricing Calculator Functionality
+        const pricingForm = document.getElementById('pricing-form');
+        const pricingResult = document.getElementById('pricing-result');
+        
+        pricingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const internetSpeed = parseFloat(document.getElementById('internet-speed').value);
+            const mobilePlan = parseFloat(document.getElementById('mobile-plan').value);
+            const tvService = parseFloat(document.getElementById('tv-service').value);
+            const businessPhone = parseFloat(document.getElementById('business-phone').value);
+            
+            // Calculate total
+            let total = internetSpeed + mobilePlan + tvService + businessPhone;
+            
+            // Apply bundle discounts
+            let discount = 0;
+            if (internetSpeed > 0 && mobilePlan > 0) discount += 10; // Internet + Mobile
+            if (tvService > 0 && internetSpeed > 0) discount += 15; // TV + Internet
+            if (businessPhone > 0 && internetSpeed > 0) discount += 20; // Phone + Internet
+            
+            total = Math.max(0, total - discount);
+            
+            // Display results
+            const priceAmount = pricingResult.querySelector('.price-amount');
+            const breakdownItems = pricingResult.querySelector('.breakdown-items');
+            const savingsInfo = pricingResult.querySelector('.savings-info');
+            
+            priceAmount.textContent = `$${total.toFixed(2)}`;
+            
+            // Build breakdown
+            let breakdownHTML = '';
+            if (internetSpeed > 0) {
+                const speedText = document.getElementById('internet-speed').options[document.getElementById('internet-speed').selectedIndex].text;
+                breakdownHTML += `<div class="breakdown-item"><span>${speedText.split(' - ')[0]}</span><span>$${internetSpeed.toFixed(2)}</span></div>`;
+            }
+            if (mobilePlan > 0) {
+                const planText = document.getElementById('mobile-plan').options[document.getElementById('mobile-plan').selectedIndex].text;
+                breakdownHTML += `<div class="breakdown-item"><span>${planText.split(' - ')[0]}</span><span>$${mobilePlan.toFixed(2)}</span></div>`;
+            }
+            if (tvService > 0) {
+                const tvText = document.getElementById('tv-service').options[document.getElementById('tv-service').selectedIndex].text;
+                breakdownHTML += `<div class="breakdown-item"><span>${tvText.split(' - ')[0]}</span><span>$${tvService.toFixed(2)}</span></div>`;
+            }
+            if (businessPhone > 0) {
+                const phoneText = document.getElementById('business-phone').options[document.getElementById('business-phone').selectedIndex].text;
+                breakdownHTML += `<div class="breakdown-item"><span>${phoneText.split(' - ')[0]}</span><span>$${businessPhone.toFixed(2)}</span></div>`;
+            }
+            
+            if (discount > 0) {
+                breakdownHTML += `<div class="breakdown-item discount"><span>Bundle Discount</span><span>-$${discount.toFixed(2)}</span></div>`;
+            }
+            
+            breakdownItems.innerHTML = breakdownHTML;
+            
+            if (discount > 0) {
+                savingsInfo.innerHTML = `<p class="savings-text">🎉 You're saving $${discount.toFixed(2)}/month with bundle discounts!</p>`;
+            } else {
+                savingsInfo.innerHTML = `<p class="savings-text">💡 Add more services to unlock bundle discounts!</p>`;
+            }
+            
+            pricingResult.style.display = 'block';
+            pricingResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+
+        // Auto-update pricing when selections change
+        ['internet-speed', 'mobile-plan', 'tv-service', 'business-phone'].forEach(id => {
+            document.getElementById(id).addEventListener('change', function() {
+                if (pricingResult.style.display === 'block') {
+                    pricingForm.dispatchEvent(new Event('submit'));
+                }
+            });
+        });
+
+        // Simple notification system
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 20px;
+                border-radius: 10px;
+                color: white;
+                font-weight: 600;
+                z-index: 10000;
+                animation: slideIn 0.3s ease-out;
+                background: ${type === 'success' ? 'linear-gradient(135deg, #10b981, #059669)' : 'linear-gradient(135deg, #3b82f6, #1d4ed8)'};
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease-out';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // Add CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            .btn.loading {
+                position: relative;
+                color: transparent;
+            }
+            .btn.loading::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 20px;
+                height: 20px;
+                margin: -10px 0 0 -10px;
+                border: 2px solid white;
+                border-radius: 50%;
+                border-top-color: transparent;
+                animation: spin 1s linear infinite;
+            }
+            @keyframes spin {
+                to { transform: rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Add custom styling for services tools section
+        const servicesToolsStyle = document.createElement('style');
+        servicesToolsStyle.textContent = `
+            .services-tools {
+                background: white !important;
+                position: relative;
+                padding: 80px 0;
+            }
+            
+            .services-tools::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background: var(--accent-gradient);
+            }
+            
+            .services-tools h2 {
+                text-align: center;
+                font-size: 2.5rem;
+                margin-bottom: 3rem;
+                font-weight: 800;
+                background: var(--primary-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                position: relative;
+            }
+            
+            .services-tools h2::after {
+                content: '';
+                position: absolute;
+                bottom: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 4px;
+                background: var(--accent-gradient);
+                border-radius: 2px;
+            }
+            
+            .services-tools .tool-card {
+                background: white;
+                border: 1px solid var(--border-color);
+                box-shadow: var(--card-shadow);
+            }
+            
+            .services-tools .tool-card::before {
+                background: var(--accent-gradient);
+            }
+            
+            .services-tools .tool-header h3 {
+                background: var(--primary-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            
+            .services-tools .coverage-result,
+            .services-tools .pricing-result {
+                background: var(--bg-light);
+                border: 1px solid var(--border-color);
+            }
+        `;
+        document.head.appendChild(servicesToolsStyle);
+    </script>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float" onclick="startWhatsAppChat()" aria-label="Start WhatsApp chat"></div>
+
+    <script>
+        // WhatsApp Functions
+        function startWhatsAppChat() {
+            const phoneNumber = '0625561111'; // SwiftCom WhatsApp number
+            const message = 'Hello SwiftCom! I need help with your services.';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            showNotification('Opening WhatsApp chat...', 'success');
+        }
+        
+        function showNotification(message, type) {
+            // Simple notification implementation
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 1rem 1.5rem;
+                background: ${type === 'success' ? '#48bb78' : '#f56565'};
+                color: white;
+                border-radius: 8px;
+                z-index: 10000;
+                animation: slideIn 0.3s ease;
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

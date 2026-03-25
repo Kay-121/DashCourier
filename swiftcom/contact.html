@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - SwiftCom Telecommunications</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="index.html" aria-label="SwiftCom homepage">SwiftCom</a></h1>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li aria-current="page">Contact</li>
+                </ol>
+            </div>
+        </nav>
+
+        <section class="page-header">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for support, sales, or general inquiries</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <!-- Progress Indicator -->
+                <div class="progress-container">
+                    <div class="progress-steps">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-title">Contact Info</div>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-title">Message</div>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-title">Connect</div>
+                        </div>
+                        <div class="step" data-step="4">
+                            <div class="step-number">✓</div>
+                            <div class="step-title">Complete</div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 25%"></div>
+                    </div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Connect via WhatsApp</h3>
+                        <p>Get instant support and answers to your questions through WhatsApp. Our team is ready to help you 24/7!</p>
+                        
+                        <div class="whatsapp-contact-card">
+                            <div class="whatsapp-icon">💬</div>
+                            <div class="whatsapp-details">
+                                <h4>WhatsApp Support</h4>
+                                <p>Click below to start a conversation</p>
+                                <div class="whatsapp-status">
+                                    <span class="status-dot online"></span>
+                                    <span>Online - Available Now</span>
+                                </div>
+                            </div>
+                            <button class="whatsapp-btn" onclick="startWhatsAppChat()">
+                                <span>📱</span>
+                                Start Chat
+                            </button>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">⚡</div>
+                            <div class="contact-details">
+                                <h4>Instant Response</h4>
+                                <p>Get immediate answers without waiting</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h4>Mobile First</h4>
+                                <p>Chat from anywhere, anytime on your phone</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">🔒</div>
+                            <div class="contact-details">
+                                <h4>Secure & Private</h4>
+                                <p>End-to-end encryption for your privacy</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📎</div>
+                            <div class="contact-details">
+                                <h4>Share Files Easily</h4>
+                                <p>Send screenshots, documents, and photos</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">🌍</div>
+                            <div class="contact-details">
+                                <h4>Multi-language Support</h4>
+                                <p>Chat in your preferred language</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="whatsapp-form-container">
+                        <div class="whatsapp-form">
+                            <h3>Quick Connect Form</h3>
+                            <p>Tell us what you need, and we'll start the WhatsApp conversation for you!</p>
+                            
+                            <form id="whatsapp-connect-form" class="contact-form">
+                                <div class="form-step active" data-step="1">
+                                    <div class="form-group">
+                                        <label for="whatsapp-name">Your Name *</label>
+                                        <input type="text" id="whatsapp-name" name="name" required placeholder="John Doe">
+                                        <span class="error-message" id="name-error"></span>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="whatsapp-phone">WhatsApp Number *</label>
+                                        <input type="tel" id="whatsapp-phone" name="phone" required placeholder="+1 (555) 123-4567">
+                                        <span class="error-message" id="phone-error"></span>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="whatsapp-email">Email Address</label>
+                                        <input type="email" id="whatsapp-email" name="email" placeholder="john@example.com">
+                                        <span class="error-message" id="email-error"></span>
+                                    </div>
+
+                                    <div class="form-navigation">
+                                        <button type="button" class="form-nav-btn next" onclick="nextStep(1)">Next Step</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-step" data-step="2">
+                                    <div class="form-group">
+                                        <label for="whatsapp-service">Service Interest *</label>
+                                        <select id="whatsapp-service" name="service" required>
+                                            <option value="">Select a service</option>
+                                            <option value="internet">Internet Services</option>
+                                            <option value="mobile">Mobile Plans</option>
+                                            <option value="tv">TV Packages</option>
+                                            <option value="business">Business Solutions</option>
+                                            <option value="support">Technical Support</option>
+                                            <option value="billing">Billing Questions</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <span class="error-message" id="service-error"></span>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="whatsapp-urgency">Urgency Level</label>
+                                        <select id="whatsapp-urgency" name="urgency">
+                                            <option value="general">General Inquiry</option>
+                                            <option value="urgent">Urgent - Need Help Today</option>
+                                            <option value="emergency">Emergency - Service Down</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-navigation">
+                                        <button type="button" class="form-nav-btn prev" onclick="prevStep(2)">Previous</button>
+                                        <button type="button" class="form-nav-btn next" onclick="nextStep(2)">Next Step</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-step" data-step="3">
+                                    <div class="form-group">
+                                        <label for="whatsapp-message">Your Message *</label>
+                                        <textarea id="whatsapp-message" name="message" required placeholder="Tell us how we can help you..." rows="4"></textarea>
+                                        <span class="error-message" id="message-error"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" id="whatsapp-consent" name="consent" required>
+                                            <span class="checkmark"></span>
+                                            I consent to being contacted via WhatsApp
+                                        </label>
+                                    </div>
+
+                                    <div class="form-navigation">
+                                        <button type="button" class="form-nav-btn prev" onclick="prevStep(3)">Previous</button>
+                                        <button type="submit" class="form-nav-btn next">Start WhatsApp Chat</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                                <button type="reset" class="btn btn-secondary">Clear Form</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="support-hours">
+            <div class="container">
+                <h3>Support Hours</h3>
+                <div class="hours-grid">
+                    <div class="hours-card">
+                        <h4>Emergency Support</h4>
+                        <p>Available 24/7/365</p>
+                        <p>For service outages and critical issues</p>
+                    </div>
+                    <div class="hours-card">
+                        <h4>Technical Support</h4>
+                        <p>Mon-Fri: 8AM-8PM EST</p>
+                        <p>Sat-Sun: 10AM-6PM EST</p>
+                    </div>
+                    <div class="hours-card">
+                        <h4>Sales & Billing</h4>
+                        <p>Mon-Fri: 9AM-6PM PST</p>
+                        <p>Closed on weekends</p>
+                    </div>
+                    <div class="hours-card">
+                        <h4>Live Chat</h4>
+                        <p>Mon-Fri: 8AM-8PM EST</p>
+                        <p>Sat-Sun: 10AM-4PM EST</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>How quickly will I receive a response?</h4>
+                        <p>Email responses typically within 24 hours. Phone support immediate during business hours. Live chat average 2 minutes.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do you offer on-site support?</h4>
+                        <p>Yes, we offer on-site support for business customers in major metropolitan areas. Additional fees may apply.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What information should I include in my support request?</h4>
+                        <p>Please include your account number, service address, detailed description of the issue, and best contact method.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How do I report a service outage?</h4>
+                        <p>Call our 24/7 emergency line at 1-800-SWIFTCOM or use our online portal for immediate outage reporting.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SwiftCom</h3>
+                    <p>Your trusted partner in telecommunications since 2008.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 1-800-SWIFTCOM</p>
+                    <p>📧 info@swiftcom.com</p>
+                    <p>📍 123 Tech Avenue, Silicon Valley, CA 94025</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SwiftCom. All rights reserved. Private Website.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced form validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (validateForm()) {
+                // Show loading state
+                const submitBtn = this.querySelector('button[type="submit"]');
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+                    
+                    // Show success message
+                    showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
+                    this.reset();
+                    clearErrors();
+                }, 2000);
+            }
+        });
+
+        function validateForm() {
+            let isValid = true;
+            clearErrors();
+
+            // Validate name
+            const name = document.getElementById('name');
+            if (!name.value.trim() || name.value.trim().length < 2) {
+                showError('name-error', 'Please enter your full name (at least 2 characters)');
+                isValid = false;
+            }
+
+            // Validate email
+            const email = document.getElementById('email');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.value.trim() || !emailPattern.test(email.value)) {
+                showError('email-error', 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            // Validate phone (optional but if provided, should be valid)
+            const phone = document.getElementById('phone');
+            if (phone.value.trim()) {
+                const phonePattern = /^[\d\s\-\+\(\)]+$/;
+                if (!phonePattern.test(phone.value) || phone.value.replace(/\D/g, '').length < 10) {
+                    showError('phone-error', 'Please enter a valid phone number (at least 10 digits)');
+                    isValid = false;
+                }
+            }
+
+            // Validate subject
+            const subject = document.getElementById('subject');
+            if (!subject.value) {
+                showError('subject-error', 'Please select a subject');
+                isValid = false;
+            }
+
+            // Validate message
+            const message = document.getElementById('message');
+            if (!message.value.trim() || message.value.trim().length < 10) {
+                showError('message-error', 'Please enter a message (at least 10 characters)');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function showError(elementId, message) {
+            const errorElement = document.getElementById(elementId);
+            const inputElement = document.getElementById(elementId.replace('-error', ''));
+            
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+            inputElement.classList.add('error');
+            inputElement.setAttribute('aria-invalid', 'true');
+        }
+
+        function clearErrors() {
+            const errorElements = document.querySelectorAll('.error-message');
+            const inputElements = document.querySelectorAll('input, select, textarea');
+            
+            errorElements.forEach(element => {
+                element.textContent = '';
+                element.style.display = 'none';
+            });
+            
+            inputElements.forEach(element => {
+                element.classList.remove('error');
+                element.removeAttribute('aria-invalid');
+            });
+        }
+
+        function showNotification(message, type = 'info') {
+            // Remove any existing notifications
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.setAttribute('role', 'alert');
+            notification.innerHTML = `
+                <span>${message}</span>
+                <button class="notification-close" aria-label="Close notification">&times;</button>
+            `;
+
+            // Add to page
+            document.body.appendChild(notification);
+
+            // Show notification
+            setTimeout(() => notification.classList.add('show'), 100);
+
+            // Close button functionality
+            notification.querySelector('.notification-close').addEventListener('click', () => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            });
+
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.classList.remove('show');
+                    setTimeout(() => notification.remove(), 300);
+                }
+            }, 5000);
+        }
+
+        // Real-time validation
+        document.getElementById('name').addEventListener('blur', function() {
+            if (this.value.trim() && this.value.trim().length >= 2) {
+                document.getElementById('name-error').textContent = '';
+                document.getElementById('name-error').style.display = 'none';
+                this.classList.remove('error');
+                this.removeAttribute('aria-invalid');
+            }
+        });
+
+        document.getElementById('email').addEventListener('blur', function() {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (this.value.trim() && emailPattern.test(this.value)) {
+                document.getElementById('email-error').textContent = '';
+                document.getElementById('email-error').style.display = 'none';
+                this.classList.remove('error');
+                this.removeAttribute('aria-invalid');
+            }
+        });
+
+        document.getElementById('message').addEventListener('blur', function() {
+            if (this.value.trim() && this.value.trim().length >= 10) {
+                document.getElementById('message-error').textContent = '';
+                document.getElementById('message-error').style.display = 'none';
+                this.classList.remove('error');
+                this.removeAttribute('aria-invalid');
+            }
+        });
+
+        // Clear form button
+        document.querySelector('button[type="reset"]').addEventListener('click', function() {
+            clearErrors();
+        });
+
+        // WhatsApp Functions
+        function startWhatsAppChat() {
+            const phoneNumber = '0625561111'; // SwiftCom WhatsApp number
+            const message = 'Hello SwiftCom! I need help with your services.';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            showNotification('Opening WhatsApp chat...', 'success');
+        }
+
+        // Multi-step form functionality
+        let currentStep = 1;
+        const totalSteps = 3;
+
+        function updateProgress(step) {
+            // Update progress bar
+            const progressFill = document.querySelector('.progress-fill');
+            const progressPercentage = (step / totalSteps) * 100;
+            progressFill.style.width = `${progressPercentage}%`;
+
+            // Update step indicators
+            document.querySelectorAll('.step').forEach((stepEl, index) => {
+                if (index < step - 1) {
+                    stepEl.classList.add('completed');
+                    stepEl.classList.remove('active');
+                } else if (index === step - 1) {
+                    stepEl.classList.add('active');
+                    stepEl.classList.remove('completed');
+                } else {
+                    stepEl.classList.remove('active', 'completed');
+                }
+            });
+        }
+
+        function showStep(step) {
+            document.querySelectorAll('.form-step').forEach(stepEl => {
+                stepEl.classList.remove('active');
+            });
+            document.querySelector(`.form-step[data-step="${step}"]`).classList.add('active');
+            updateProgress(step);
+        }
+
+        function nextStep(step) {
+            if (validateStep(step)) {
+                if (step < totalSteps) {
+                    currentStep = step + 1;
+                    showStep(currentStep);
+                }
+            }
+        }
+
+        function prevStep(step) {
+            if (step > 1) {
+                currentStep = step - 1;
+                showStep(currentStep);
+            }
+        }
+
+        function validateStep(step) {
+            let isValid = true;
+            const currentFormStep = document.querySelector(`.form-step[data-step="${step}"]`);
+            const requiredFields = currentFormStep.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.classList.add('error');
+                    const errorElement = document.getElementById(`${field.name}-error`);
+                    if (errorElement) {
+                        errorElement.textContent = 'This field is required';
+                    }
+                } else {
+                    field.classList.remove('error');
+                    const errorElement = document.getElementById(`${field.name}-error`);
+                    if (errorElement) {
+                        errorElement.textContent = '';
+                    }
+                }
+            });
+
+            return isValid;
+        }
+
+        // WhatsApp form submission
+        document.getElementById('whatsapp-connect-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (validateStep(3)) {
+                const formData = new FormData(this);
+                const name = formData.get('name');
+                const phone = formData.get('phone');
+                const email = formData.get('email');
+                const service = formData.get('service');
+                const urgency = formData.get('urgency');
+                const message = formData.get('message');
+                
+                const whatsappMessage = `*New Contact Request*\n\n` +
+                    `*Name:* ${name}\n` +
+                    `*Phone:* ${phone}\n` +
+                    `*Email:* ${email}\n` +
+                    `*Service:* ${service}\n` +
+                    `*Urgency:* ${urgency}\n\n` +
+                    `*Message:* ${message}`;
+                
+                const phoneNumber = '0625561111';
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+                
+                // Update progress to complete
+                currentStep = 4;
+                updateProgress(currentStep);
+                
+                // Show success message
+                showNotification('Connecting you to WhatsApp...', 'success');
+                
+                // Open WhatsApp
+                setTimeout(() => {
+                    window.open(whatsappUrl, '_blank');
+                }, 1000);
+            }
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        
+        // Check for saved dark mode preference
+        const savedDarkMode = localStorage.getItem('darkMode');
+        if (savedDarkMode === 'true') {
+            body.classList.add('dark-mode');
+        }
+        
+        // Toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+                mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

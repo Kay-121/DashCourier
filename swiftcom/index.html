@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SwiftCom - Next generation telecommunications company offering high-speed internet, mobile plans, and business solutions with 99.9% uptime guarantee.">
+    <meta name="keywords" content="telecommunications, internet, mobile, business phone, fiber optic, 5G">
+    <meta name="author" content="SwiftCom">
+    <title>SwiftCom - Next Generation Telecommunications</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Notification Container -->
+    <div class="notification-container" id="notification-container"></div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scroll-to-top" onclick="scrollToTop()" aria-label="Scroll to top">
+        ↑
+    </div>
+
+    <header role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="index.html" aria-label="SwiftCom homepage">SwiftCom</a></h1>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-title">Connecting the Future, Today</h1>
+                    <p>Experience lightning-fast internet, crystal-clear voice, and reliable communication solutions with SwiftCom's cutting-edge telecommunications services.</p>
+                    <div class="hero-buttons">
+                        <a href="services.html" class="btn btn-primary" aria-label="Explore our telecommunications services">Explore Services</a>
+                        <a href="contact.html" class="btn btn-secondary" aria-label="Get started with SwiftCom today">Get Started</a>
+                    </div>
+                </div>
+                <div class="hero-image" aria-hidden="true">
+                    <div class="network-animation">
+                        <div class="core"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" aria-labelledby="features-title">
+            <div class="container">
+                <h2 id="features-title">Why Choose SwiftCom?</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🚀</div>
+                        <h3>Lightning Fast</h3>
+                        <p>Fiber-optic speeds up to 10 Gbps for seamless streaming and gaming.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🛡️</div>
+                        <h3>99.9% Uptime</h3>
+                        <p>Reliable network infrastructure with guaranteed service availability.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🌍</div>
+                        <h3>Nationwide Coverage</h3>
+                        <p>Extensive network spanning across all major cities and rural areas.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">💬</div>
+                        <h3>24/7 Support</h3>
+                        <p>Round-the-clock customer support from our expert technical team.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats" aria-labelledby="stats-title">
+            <div class="container">
+                <h2 id="stats-title" class="visually-hidden">Our Achievements</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>2M+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Cities Covered</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>99.9%</h3>
+                        <p>Uptime Guarantee</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>15+ Years</h3>
+                        <p>Industry Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <h2 id="testimonials-title">What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">★★★★★</div>
+                            <p>"SwiftCom's fiber internet has transformed our business. The speed and reliability are unmatched, and their customer support is exceptional."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JD</div>
+                            <div class="author-info">
+                                <h4>John Davidson</h4>
+                                <p>CEO, TechStart Inc.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">★★★★★</div>
+                            <p>"We switched to SwiftCom six months ago and haven't looked back. The 5G coverage is incredible everywhere we go."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SM</div>
+                            <div class="author-info">
+                                <h4>Sarah Mitchell</h4>
+                                <p>Marketing Director</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">★★★★★</div>
+                            <p>"The business phone system has streamlined our communications. Crystal-clear calls and features that actually help our team be more productive."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MC</div>
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <p>Operations Manager</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter" aria-labelledby="newsletter-title">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2 id="newsletter-title">Stay Connected with SwiftCom</h2>
+                    <p>Get the latest updates on new services, special offers, and technology trends delivered to your inbox.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="newsletter-input-group">
+                            <input type="email" id="newsletter-email" placeholder="Enter your email address" required aria-label="Email address">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        <div class="newsletter-benefits">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter-offers" checked>
+                                <span class="checkmark"></span>
+                                Special offers and discounts
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter-updates" checked>
+                                <span class="checkmark"></span>
+                                Service updates and news
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter-tips">
+                                <span class="checkmark"></span>
+                                Tech tips and guides
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Integration Section -->
+        <section class="social-section" aria-labelledby="social-title">
+            <div class="container">
+                <h2 id="social-title">Connect With SwiftCom</h2>
+                <p>Follow us for updates, tips, and exclusive offers</p>
+                <div class="social-grid">
+                    <div class="social-card">
+                        <div class="social-icon">📘</div>
+                        <h3>Facebook</h3>
+                        <p>Join our community for daily updates and customer stories</p>
+                        <div class="social-stats">
+                            <span>50K+ Followers</span>
+                            <span>4.8★ Rating</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="openSocial('facebook')">Follow Us</button>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-icon">🐦</div>
+                        <h3>Twitter</h3>
+                        <p>Real-time service updates and tech tips</p>
+                        <div class="social-stats">
+                            <span>25K+ Followers</span>
+                            <span>Daily Updates</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="openSocial('twitter')">Follow Us</button>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-icon">📷</div>
+                        <h3>Instagram</h3>
+                        <p>Behind the scenes and customer spotlights</p>
+                        <div class="social-stats">
+                            <span>30K+ Followers</span>
+                            <span>Visual Stories</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="openSocial('instagram')">Follow Us</button>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <p>Career opportunities and industry insights</p>
+                        <div class="social-stats">
+                            <span>15K+ Followers</span>
+                            <span>Professional Network</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="openSocial('linkedin')">Connect</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Sharing Widget -->
+        <div class="social-sharing-widget" id="social-sharing">
+            <button class="social-toggle" onclick="toggleSocialSharing()" aria-label="Toggle social sharing">
+                <span>📤</span>
+            </button>
+            <div class="social-sharing-panel">
+                <h4>Share SwiftCom</h4>
+                <div class="sharing-buttons">
+                    <button onclick="shareOn('facebook')" class="share-btn facebook" aria-label="Share on Facebook">📘</button>
+                    <button onclick="shareOn('twitter')" class="share-btn twitter" aria-label="Share on Twitter">🐦</button>
+                    <button onclick="shareOn('linkedin')" class="share-btn linkedin" aria-label="Share on LinkedIn">💼</button>
+                    <button onclick="shareOn('whatsapp')" class="share-btn whatsapp" aria-label="Share on WhatsApp">💬</button>
+                    <button onclick="copyLink()" class="share-btn copy" aria-label="Copy link">🔗</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float" onclick="startWhatsAppChat()" aria-label="Start WhatsApp chat"></div>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SwiftCom</h3>
+                    <p>Your trusted partner in telecommunications since 2008.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 1-800-SWIFTCOM</p>
+                    <p>📧 info@swiftcom.com</p>
+                    <p>📍 123 Tech Avenue, Silicon Valley, CA 94025</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SwiftCom. All rights reserved. Private Website.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- User-friendly features -->
+    <button class="scroll-to-top" aria-label="Scroll to top of page" title="Back to top">
+        <span aria-hidden="true">↑</span>
+    </button>
+
+    <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Search">
+        <div class="search-container">
+            <button class="search-close" aria-label="Close search">&times;</button>
+            <input type="search" id="search-input" placeholder="Search services, features, or information..." aria-label="Search">
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </div>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <button class="chat-toggle" id="chat-toggle" aria-label="Open live chat">
+            <span class="chat-icon">💬</span>
+            <span class="chat-text">Live Chat</span>
+        </button>
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <h4>SwiftCom Support</h4>
+                <button class="chat-minimize" id="chat-minimize" aria-label="Minimize chat">−</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    <span class="message-avatar">🤖</span>
+                    <div class="message-content">
+                        <p>Hello! Welcome to SwiftCom. How can I help you today?</p>
+                        <div class="quick-replies">
+                            <button class="quick-reply" data-message="I need help with my internet service">Internet Support</button>
+                            <button class="quick-reply" data-message="I want to know about pricing">Pricing Info</button>
+                            <button class="quick-reply" data-message="I need technical support">Technical Help</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Type your message..." aria-label="Chat message">
+                <button id="chat-send" aria-label="Send message">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // WhatsApp Functions
+        function startWhatsAppChat() {
+            const phoneNumber = '0625561111'; // SwiftCom WhatsApp number
+            const message = 'Hello SwiftCom! I need help with your services.';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            showNotification('Opening WhatsApp chat...', 'success');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                showNotification('Link copied to clipboard!', 'success');
+            }).catch(() => {
+                showNotification('Failed to copy link', 'error');
+            });
+        }
+
+        // Close social sharing panel when clicking outside
+        document.addEventListener('click', (e) => {
+            const widget = document.querySelector('.social-sharing-widget');
+            if (!widget.contains(e.target)) {
+                document.querySelector('.social-sharing-panel').classList.remove('active');
+            }
+        });
+
+        // Premium Notification System
+        function showNotification(message, type = 'info', title = '') {
+            const container = document.getElementById('notification-container');
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            
+            const icons = {
+                success: '✅',
+                error: '❌',
+                info: 'ℹ️'
+            };
+            
+            const titles = {
+                success: title || 'Success',
+                error: title || 'Error',
+                info: title || 'Information'
+            };
+            
+            notification.innerHTML = `
+                <div class="notification-icon">${icons[type]}</div>
+                <div class="notification-content">
+                    <div class="notification-title">${titles[type]}</div>
+                    <div class="notification-message">${message}</div>
+                </div>
+                <button class="notification-close" onclick="this.parentElement.remove()">×</button>
+            `;
+            
+            container.appendChild(notification);
+            
+            // Auto-remove after 3 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Scroll to Top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show/hide scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollButton = document.getElementById('scroll-to-top');
+            if (window.pageYOffset > 300) {
+                scrollButton.classList.add('visible');
+            } else {
+                scrollButton.classList.remove('visible');
+            }
+        });
+
+        // Enhanced form interactions
+        document.querySelectorAll('input, textarea, select').forEach(element => {
+            element.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            element.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+
+        // Parallax effects on scroll
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax');
+            
+            parallaxElements.forEach(element => {
+                const speed = element.dataset.speed || 0.5;
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+
+        // Staggered animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stagger-animation > *').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+            mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+            navMenu.classList.toggle('active');
+        });
+
+        // Scroll to top functionality
+        const scrollToTop = document.querySelector('.scroll-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTop.classList.add('visible');
+            } else {
+                scrollToTop.classList.remove('visible');
+            }
+        });
+
+        scrollToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Search functionality
+        const searchOverlay = document.getElementById('search-overlay');
+        const searchInput = document.getElementById('search-input');
+        const searchClose = document.querySelector('.search-close');
+        
+        // Open search with Ctrl+K or Cmd+K
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                searchOverlay.classList.add('active');
+                searchInput.focus();
+            }
+            if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+                searchOverlay.classList.remove('active');
+            }
+        });
+
+        searchClose.addEventListener('click', () => {
+            searchOverlay.classList.remove('active');
+        });
+
+        searchOverlay.addEventListener('click', (e) => {
+            if (e.target === searchOverlay) {
+                searchOverlay.classList.remove('active');
+            }
+        });
+
+        // Basic search functionality
+        const searchableContent = [
+            { title: 'High-Speed Internet', url: 'services.html', description: 'Fiber-optic internet up to 10 Gbps' },
+            { title: 'Mobile Plans', url: 'services.html', description: 'Unlimited talk, text, and data' },
+            { title: 'Business Phone Systems', url: 'services.html', description: 'Professional VoIP solutions' },
+            { title: 'Digital TV Services', url: 'services.html', description: 'Premium television entertainment' },
+            { title: 'Enterprise Solutions', url: 'services.html', description: 'Custom infrastructure for large businesses' },
+            { title: 'Cybersecurity Services', url: 'services.html', description: 'Network security and protection' },
+            { title: '24/7 Support', url: 'contact.html', description: 'Round-the-clock customer support' },
+            { title: 'Contact Us', url: 'contact.html', description: 'Get in touch with our team' }
+        ];
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const resultsContainer = document.getElementById('search-results');
+            
+            if (query.length < 2) {
+                resultsContainer.innerHTML = '';
+                return;
+            }
+
+            const results = searchableContent.filter(item => 
+                item.title.toLowerCase().includes(query) || 
+                item.description.toLowerCase().includes(query)
+            );
+
+            if (results.length > 0) {
+                resultsContainer.innerHTML = results.map(item => `
+                    <div class="search-result-item">
+                        <a href="${item.url}">
+                            <h4>${item.title}</h4>
+                            <p>${item.description}</p>
+                        </a>
+                    </div>
+                `).join('');
+            } else {
+                resultsContainer.innerHTML = '<div class="search-no-results">No results found</div>';
+            }
+        });
+
+        // Add loading states for better UX
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (!this.href) {
+                    e.preventDefault();
+                    this.classList.add('loading');
+                    setTimeout(() => {
+                        this.classList.remove('loading');
+                    }, 1000);
+                }
+            });
+        });
+
+        // Enhanced keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-navigation');
+            }
+        });
+
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-navigation');
+        });
+
+        // Live Chat Functionality
+        const chatWidget = document.getElementById('chat-widget');
+        const chatToggle = document.getElementById('chat-toggle');
+        const chatWindow = document.getElementById('chat-window');
+        const chatMinimize = document.getElementById('chat-minimize');
+        const chatInput = document.getElementById('chat-input');
+        const chatSend = document.getElementById('chat-send');
+        const chatMessages = document.getElementById('chat-messages');
+
+        chatToggle.addEventListener('click', () => {
+            chatWindow.classList.toggle('open');
+            chatToggle.classList.toggle('active');
+            if (chatWindow.classList.contains('open')) {
+                chatInput.focus();
+            }
+        });
+
+        chatMinimize.addEventListener('click', () => {
+            chatWindow.classList.remove('open');
+            chatToggle.classList.remove('active');
+        });
+
+        function sendMessage(message) {
+            if (!message.trim()) return;
+
+            // Add user message
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user-message';
+            userMessage.innerHTML = `
+                <div class="message-content">
+                    <p>${message}</p>
+                </div>
+                <span class="message-avatar">👤</span>
+            `;
+            chatMessages.appendChild(userMessage);
+
+            // Clear input
+            chatInput.value = '';
+
+            // Simulate bot response
+            setTimeout(() => {
+                const botResponse = getBotResponse(message);
+                const botMessage = document.createElement('div');
+                botMessage.className = 'message bot-message';
+                botMessage.innerHTML = `
+                    <span class="message-avatar">🤖</span>
+                    <div class="message-content">
+                        <p>${botResponse}</p>
+                    </div>
+                `;
+                chatMessages.appendChild(botMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function getBotResponse(message) {
+            const responses = {
+                'internet': 'Our fiber internet offers speeds up to 10 Gbps with 99.9% uptime. Would you like to check availability in your area?',
+                'pricing': 'We have plans starting at $49.99/month for internet and $39.99/month for mobile. Visit our services page for detailed pricing.',
+                'technical': 'I can help with technical issues. Could you describe the problem you\'re experiencing?',
+                'support': 'Our support team is available 24/7. You can call 1-800-SWIFTCOM or continue chatting here.',
+                'default': 'Thank you for your message. A support specialist will be with you shortly. Is there anything specific I can help you with?'
+            };
+
+            const lowerMessage = message.toLowerCase();
+            for (const [key, response] of Object.entries(responses)) {
+                if (lowerMessage.includes(key)) {
+                    return response;
+                }
+            }
+            return responses.default;
+        }
+
+        chatSend.addEventListener('click', () => {
+            sendMessage(chatInput.value);
+        });
+
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage(chatInput.value);
+            }
+        });
+
+        // Quick reply buttons
+        document.querySelectorAll('.quick-reply').forEach(button => {
+            button.addEventListener('click', () => {
+                const message = button.getAttribute('data-message');
+                sendMessage(message);
+            });
+        });
+
+        // Newsletter functionality
+        const newsletterForm = document.getElementById('newsletter-form');
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('newsletter-email').value;
+            const offers = document.getElementById('newsletter-offers').checked;
+            const updates = document.getElementById('newsletter-updates').checked;
+            const tips = document.getElementById('newsletter-tips').checked;
+            
+            if (email) {
+                // Show loading state
+                const submitBtn = this.querySelector('button[type="submit"]');
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
+                
+                // Simulate subscription
+                setTimeout(() => {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+                    
+                    // Show success message
+                    showNotification(`Thank you for subscribing! You'll receive updates at ${email}`, 'success');
+                    this.reset();
+                    
+                    // Reset checkboxes to default state
+                    document.getElementById('newsletter-offers').checked = true;
+                    document.getElementById('newsletter-updates').checked = true;
+                    document.getElementById('newsletter-tips').checked = false;
+                }, 1500);
+            }
+        });
+
+        // Coverage Checker Functionality
+        const coverageForm = document.getElementById('coverage-form');
+        const coverageResult = document.getElementById('coverage-result');
+        
+        coverageForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const zipCode = document.getElementById('zip-code').value;
+            
+            if (zipCode && zipCode.length === 5) {
+                // Show loading state
+                const submitBtn = this.querySelector('button[type="submit"]');
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
+                
+                // Simulate coverage check
+                setTimeout(() => {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+                    
+                    // Mock coverage data based on ZIP code
+                    const isCovered = parseInt(zipCode) % 2 === 0; // Even ZIPs are covered
+                    
+                    const resultIcon = coverageResult.querySelector('.result-icon');
+                    const resultTitle = coverageResult.querySelector('h4');
+                    const resultText = coverageResult.querySelector('p');
+                    const availableServices = coverageResult.querySelector('.available-services');
+                    
+                    if (isCovered) {
+                        resultIcon.innerHTML = '✅';
+                        resultTitle.textContent = 'Great News! SwiftCom is Available';
+                        resultText.textContent = `ZIP code ${zipCode} is in our service area with full coverage.`;
+                        availableServices.innerHTML = `
+                            <h5>Available Services:</h5>
+                            <ul>
+                                <li>🚀 Fiber Internet (up to 10 Gbps)</li>
+                                <li>📱 5G Mobile Service</li>
+                                <li>📺 Digital TV</li>
+                                <li>☎️ Business Phone Systems</li>
+                            </ul>
+                            <button class="btn btn-primary" onclick="showNotification('A representative will contact you soon!', 'success')">Get Started</button>
+                        `;
+                    } else {
+                        resultIcon.innerHTML = '❌';
+                        resultTitle.textContent = 'Service Not Yet Available';
+                        resultText.textContent = `ZIP code ${zipCode} is not currently in our service area.`;
+                        availableServices.innerHTML = `
+                            <h5>We're expanding! Expected coverage:</h5>
+                            <p>Coming to your area in Q3 2024</p>
+                            <button class="btn btn-secondary" onclick="showNotification('You\'ll be notified when service is available!', 'info')">Notify Me</button>
+                        `;
+                    }
+                    
+                    coverageResult.style.display = 'block';
+                    coverageResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 1500);
+            }
+        });
+
+        // Pricing Calculator Functionality
+        const pricingForm = document.getElementById('pricing-form');
+        const pricingResult = document.getElementById('pricing-result');
+        
+        pricingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const internetSpeed = parseFloat(document.getElementById('internet-speed').value);
+            const mobilePlan = parseFloat(document.getElementById('mobile-plan').value);
+            const tvService = parseFloat(document.getElementById('tv-service').value);
+            const businessPhone = parseFloat(document.getElementById('business-phone').value);
+            
+            // Calculate total
+            let total = internetSpeed + mobilePlan + tvService + businessPhone;
+            
+            // Apply bundle discounts
+            let discount = 0;
+            if (internetSpeed > 0 && mobilePlan > 0) discount += 10; // Internet + Mobile
+            if (tvService > 0 && internetSpeed > 0) discount += 15; // TV + Internet
+            if (businessPhone > 0 && internetSpeed > 0) discount += 20; // Phone + Internet
+            
+            total = Math.max(0, total - discount);
+            
+            // Display results
+            const priceAmount = pricingResult.querySelector('.price-amount');
+            const breakdownItems = pricingResult.querySelector('.breakdown-items');
+            const savingsInfo = pricingResult.querySelector('.savings-info');
+            
+            priceAmount.textContent = `$${total.toFixed(2)}`;
+            
+            // Build breakdown
+            let breakdownHTML = '';
+            if (internetSpeed > 0) {
+                const speedText = document.getElementById('internet-speed').options[document.getElementById('internet-speed').selectedIndex].text;
+                breakdownHTML += `<div class="breakdown-item"><span>${speedText.split(' - ')[0]}</span><span>$${internetSpeed.toFixed(2)}</span></div>`;
+            }
+            if (mobilePlan > 0) {
+                const planText = document.getElementById('mobile-plan').options[document.getElementById('mobile-plan').selectedIndex].text;
+                breakdownHTML += `<div class="breakdown-item"><span>${planText.split(' - ')[0]}</span><span>$${mobilePlan.toFixed(2)}</span></div>`;
+            }
+            if (tvService > 0) {
+                const tvText = document.getElementById('tv-service').options[document.getElementById('tv-service').selectedIndex].text;
+                breakdownHTML += `<div class="breakdown-item"><span>${tvText.split(' - ')[0]}</span><span>$${tvService.toFixed(2)}</span></div>`;
+            }
+            if (businessPhone > 0) {
+                const phoneText = document.getElementById('business-phone').options[document.getElementById('business-phone').selectedIndex].text;
+                breakdownHTML += `<div class="breakdown-item"><span>${phoneText.split(' - ')[0]}</span><span>$${businessPhone.toFixed(2)}</span></div>`;
+            }
+            
+            if (discount > 0) {
+                breakdownHTML += `<div class="breakdown-item discount"><span>Bundle Discount</span><span>-$${discount.toFixed(2)}</span></div>`;
+            }
+            
+            breakdownItems.innerHTML = breakdownHTML;
+            
+            if (discount > 0) {
+                savingsInfo.innerHTML = `<p class="savings-text">🎉 You're saving $${discount.toFixed(2)}/month with bundle discounts!</p>`;
+            } else {
+                savingsInfo.innerHTML = `<p class="savings-text">💡 Add more services to unlock bundle discounts!</p>`;
+            }
+            
+            pricingResult.style.display = 'block';
+            pricingResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+
+        // Auto-update pricing when selections change
+        ['internet-speed', 'mobile-plan', 'tv-service', 'business-phone'].forEach(id => {
+            document.getElementById(id).addEventListener('change', function() {
+                if (pricingResult.style.display === 'block') {
+                    pricingForm.dispatchEvent(new Event('submit'));
+                }
+            });
+        });
+    </script>
+</body>
+</html>

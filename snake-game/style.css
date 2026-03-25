@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: radial-gradient(ellipse at center, #1a1a2e 0%, #0d0d1a 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.phone-frame {
+    background: linear-gradient(145deg, #3a3a3a 0%, #1f1f1f 50%, #2d2d2d 100%);
+    border-radius: 30px;
+    padding: 25px;
+    box-shadow: 
+        0 0 0 3px #0d0d0d,
+        0 0 0 6px #2a2a2a,
+        0 25px 50px rgba(0,0,0,0.6),
+        0 10px 20px rgba(0,0,0,0.4),
+        inset 0 2px 4px rgba(255,255,255,0.05),
+        inset 0 -2px 4px rgba(0,0,0,0.2);
+    max-width: 360px;
+    position: relative;
+}
+
+.phone-frame::before {
+    content: 'NOKIA';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #666;
+    font-weight: bold;
+}
+
+.screen {
+    background: #8bac0f;
+    border: 4px solid #1a1a1a;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    position: relative;
+    box-shadow: 
+        inset 0 0 20px rgba(0,0,0,0.1),
+        0 0 10px rgba(139, 172, 15, 0.3);
+}
+
+.screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0,0,0,0.06),
+        rgba(0,0,0,0.06) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events: none;
+    border-radius: 2px;
+    z-index: 10;
+}
+
+.screen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        ellipse at center,
+        transparent 0%,
+        rgba(0,0,0,0.1) 100%
+    );
+    pointer-events: none;
+    border-radius: 2px;
+    z-index: 11;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #0d1a00;
+    margin-bottom: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.high-score {
+    color: #1a4a00;
+}
+
+.speed {
+    color: #0d1a00;
+    opacity: 0.8;
+}
+
+#gameCanvas {
+    display: block;
+    background: #8bac0f;
+    image-rendering: pixelated;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
+
+.game-footer {
+    text-align: center;
+    font-size: 11px;
+    color: #0d1a00;
+    margin-top: 6px;
+    font-weight: bold;
+    min-height: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.keypad {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.nav-keys {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-middle {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.key {
+    width: 55px;
+    height: 45px;
+    background: linear-gradient(180deg, #4a4a4a 0%, #333 100%);
+    border: none;
+    border-radius: 10px;
+    color: #999;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 
+        0 5px 0 #1a1a1a,
+        0 6px 8px rgba(0,0,0,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.15),
+        inset 0 -1px 0 rgba(0,0,0,0.2);
+    transition: all 0.08s ease;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+
+.key:hover {
+    background: linear-gradient(180deg, #5a5a5a 0%, #444 100%);
+    color: #bbb;
+    transform: translateY(-1px);
+}
+
+.key:active {
+    transform: translateY(5px);
+    box-shadow: 
+        0 0 0 #1a1a1a,
+        inset 0 2px 4px rgba(0,0,0,0.4);
+}
+
+#btnCenter {
+    background: linear-gradient(180deg, #6a6a6a 0%, #4d4d4d 100%);
+    color: #ccc;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+#btnCenter:hover {
+    background: linear-gradient(180deg, #7a7a7a 0%, #5d5d5d 100%);
+    color: #eee;
+}
+
+.instructions {
+    color: #666;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.8;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+}
+
+.instructions p {
+    margin: 5px 0;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(139, 172, 15, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(139, 172, 15, 0.5); }
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); color: #1a4a00; }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 400px) {
+    .phone-frame {
+        transform: scale(0.9);
+    }
+}

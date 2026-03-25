@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - DashCourier</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>🚚 DashCourier</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Get in Touch</h1>
+                <p>We're here to help with all your delivery needs</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-details">
+                                    <h3>Phone</h3>
+                                    <p>1-800-DASH-NOW</p>
+                                    <p class="contact-subtitle">Mon-Fri: 8AM-8PM, Sat-Sun: 9AM-6PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <h3>Email</h3>
+                                    <p>info@dashcourier.com</p>
+                                    <p class="contact-subtitle">We respond within 2 hours</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-details">
+                                    <h3>Head Office</h3>
+                                    <p>123 Delivery Street</p>
+                                    <p>City, ST 12345</p>
+                                    <p class="contact-subtitle">Open Monday-Friday 9AM-5PM</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">💬</div>
+                                <div class="contact-details">
+                                    <h3>Live Chat</h3>
+                                    <p>Available on our website</p>
+                                    <p class="contact-subtitle">24/7 Customer Support</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="emergency-notice">
+                            <h3>🚨 Emergency Delivery</h3>
+                            <p>For urgent deliveries outside business hours, call our emergency hotline:</p>
+                            <p class="emergency-number">1-800-URGENT-NOW</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-section">
+                        <h2>Request a Quote</h2>
+                        <form class="contact-form" id="quoteForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="serviceType">Service Type *</label>
+                                <select id="serviceType" name="serviceType" required>
+                                    <option value="">Select a service</option>
+                                    <option value="same-day">Same-Day Delivery</option>
+                                    <option value="standard">Standard Delivery</option>
+                                    <option value="express">Express Courier</option>
+                                    <option value="business">Business Solutions</option>
+                                    <option value="international">International Shipping</option>
+                                    <option value="bulk">Bulk Shipping</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pickupAddress">Pickup Address *</label>
+                                    <input type="text" id="pickupAddress" name="pickupAddress" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deliveryAddress">Delivery Address *</label>
+                                    <input type="text" id="deliveryAddress" name="deliveryAddress" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="packageDescription">Package Description *</label>
+                                <textarea id="packageDescription" name="packageDescription" rows="3" required placeholder="Describe what you need to deliver (size, weight, contents, etc.)"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="deliveryTime">Preferred Delivery Time</label>
+                                <select id="deliveryTime" name="deliveryTime">
+                                    <option value="">No preference</option>
+                                    <option value="morning">Morning (8AM-12PM)</option>
+                                    <option value="afternoon">Afternoon (12PM-5PM)</option>
+                                    <option value="evening">Evening (5PM-8PM)</option>
+                                    <option value="asap">ASAP</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Additional Message</label>
+                                <textarea id="message" name="message" rows="3" placeholder="Any special instructions or requirements..."></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="urgent" name="urgent">
+                                    <span class="checkmark"></span>
+                                    This is an urgent delivery
+                                </label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Send me delivery tips and special offers
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">Get Quote</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How quickly can you deliver?</h3>
+                        <p>We offer same-day delivery with options for 2-4 hour or 1-hour express service depending on your location and needs.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you provide insurance?</h3>
+                        <p>Yes, all shipments are automatically insured up to $100. Additional coverage can be purchased for high-value items.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What areas do you serve?</h3>
+                        <p>We currently serve the entire metropolitan area with international shipping available to over 200 countries worldwide.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How do I track my package?</h3>
+                        <p>Once your package is picked up, you'll receive a tracking number via SMS and email to monitor real-time progress.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Ship with DashCourier?</h2>
+                    <p>Join thousands of satisfied customers who trust us with their important deliveries.</p>
+                    <a href="services.html" class="btn btn-primary btn-large">View Our Services</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DashCourier</h3>
+                    <p>Your trusted partner for fast and reliable delivery services.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📞 1-800-DASH-NOW</li>
+                        <li>📧 info@dashcourier.com</li>
+                        <li>📍 123 Delivery Street, City, ST 12345</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DashCourier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
