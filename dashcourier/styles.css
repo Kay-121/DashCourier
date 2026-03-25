@@ -1477,30 +1477,6 @@ body {
     color: #94a3b8;
 }
 
-.emergency-notice {
-    background: #fef3c7;
-    border: 1px solid #fbbf24;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-top: 2rem;
-}
-
-.emergency-notice h3 {
-    color: #92400e;
-    margin-bottom: 0.5rem;
-}
-
-.emergency-notice p {
-    color: #78350f;
-    margin-bottom: 0.5rem;
-}
-
-.emergency-number {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #92400e;
-}
-
 /* Contact Form */
 .contact-form {
     background: white;
