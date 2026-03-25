@@ -30,6 +30,15 @@
         </nav>
     </header>
 
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator">›</span>
+            <span>Contact</span>
+        </nav>
+    </div>
+
     <main>
         <section class="page-hero">
             <div class="container">
@@ -85,7 +94,13 @@
 
                     <div class="contact-form-section">
                         <h2>Request a Quote</h2>
-                        <form class="contact-form" id="quoteForm">
+                        
+                        <!-- Progress Bar -->
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        
+                        <form class="contact-form multi-step" id="quoteForm">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="firstName">First Name *</label>

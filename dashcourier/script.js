@@ -1,3 +1,333 @@
+// Enhanced UX JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // Enhanced Header Scrolling Effect
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+    
+    // Toast Message System
+    window.showToast = function(message, type = 'info', duration = 5000) {
+        const existingToast = document.querySelector('.message-toast');
+        if (existingToast) {
+            existingToast.remove();
+        }
+        
+        const toast = document.createElement('div');
+        toast.className = `message-toast ${type}`;
+        toast.textContent = message;
+        document.body.appendChild(toast);
+        
+        setTimeout(() => {
+            toast.style.animation = 'slideInRight 0.3s ease reverse';
+            setTimeout(() => toast.remove(), 300);
+        }, duration);
+    };
+    
+    // Enhanced Form Validation
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        const inputs = form.querySelectorAll('input, select, textarea');
+        
+        inputs.forEach(input => {
+            // Real-time validation
+            input.addEventListener('blur', function() {
+                validateField(this);
+            });
+            
+            input.addEventListener('input', function() {
+                if (this.parentElement.classList.contains('error')) {
+                    validateField(this);
+                }
+            });
+        });
+        
+        // Enhanced form submission
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (validateForm(this)) {
+                submitForm(this);
+            }
+        });
+    });
+    
+    function validateField(field) {
+        const formGroup = field.closest('.form-group');
+        if (!formGroup) return true;
+        
+        const value = field.value.trim();
+        const type = field.type;
+        const required = field.hasAttribute('required');
+        let isValid = true;
+        let errorMessage = '';
+        
+        // Remove previous states
+        formGroup.classList.remove('error', 'success');
+        
+        // Validation rules
+        if (required && !value) {
+            isValid = false;
+            errorMessage = 'This field is required';
+        } else if (value) {
+            switch (type) {
+                case 'email':
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(value)) {
+                        isValid = false;
+                        errorMessage = 'Please enter a valid email address';
+                    }
+                    break;
+                case 'tel':
+                    const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+                    if (!phoneRegex.test(value) || value.length < 10) {
+                        isValid = false;
+                        errorMessage = 'Please enter a valid phone number';
+                    }
+                    break;
+                case 'number':
+                    const num = parseFloat(value);
+                    if (isNaN(num) || num < 0) {
+                        isValid = false;
+                        errorMessage = 'Please enter a valid number';
+                    }
+                    break;
+            }
+        }
+        
+        // Update UI
+        if (!isValid) {
+            formGroup.classList.add('error');
+            let errorElement = formGroup.querySelector('.error-message');
+            if (!errorElement) {
+                errorElement = document.createElement('div');
+                errorElement.className = 'error-message';
+                formGroup.appendChild(errorElement);
+            }
+            errorElement.textContent = errorMessage;
+        } else if (value) {
+            formGroup.classList.add('success');
+        }
+        
+        return isValid;
+    }
+    
+    function validateForm(form) {
+        const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+        let isValid = true;
+        
+        inputs.forEach(input => {
+            if (!validateField(input)) {
+                isValid = false;
+            }
+        });
+        
+        return isValid;
+    }
+    
+    function submitForm(form) {
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        
+        // Show loading state
+        submitBtn.classList.add('loading');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        
+        // Simulate API call
+        setTimeout(() => {
+            // Show success message
+            showToast('Your message has been sent successfully!', 'success');
+            
+            // Reset form
+            form.reset();
+            form.querySelectorAll('.form-group').forEach(group => {
+                group.classList.remove('error', 'success');
+            });
+            
+            // Reset button
+            submitBtn.classList.remove('loading');
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+            
+            // Show progress for multi-step forms
+            if (form.classList.contains('multi-step')) {
+                updateProgress(form, 100);
+            }
+        }, 2000);
+    }
+    
+    // Progress Indicators
+    function updateProgress(form, percentage) {
+        const progressBar = form.querySelector('.progress-fill');
+        if (progressBar) {
+            progressBar.style.width = percentage + '%';
+        }
+    }
+    
+    // Auto-formatting
+    const phoneInputs = document.querySelectorAll('input[type="tel"]');
+    phoneInputs.forEach(input => {
+        input.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.length <= 3) {
+                    value = `(${value}`;
+                } else if (value.length <= 6) {
+                    value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+                } else {
+                    value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+                }
+            }
+            e.target.value = value;
+        });
+    });
+    
+    const zipInputs = document.querySelectorAll('input[name*="zip"], input[name*="postal"]');
+    zipInputs.forEach(input => {
+        input.addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '').slice(0, 5);
+        });
+    });
+    
+    // Enhanced Button Interactions
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Ripple effect
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple');
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => ripple.remove(), 600);
+        });
+    });
+    
+    // Smooth Scrolling
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Auto-save functionality for forms
+    const textareas = document.querySelectorAll('textarea');
+    textareas.forEach(textarea => {
+        const storageKey = `autosave_${textarea.name}_${window.location.pathname}`;
+        
+        // Restore saved content
+        const savedContent = localStorage.getItem(storageKey);
+        if (savedContent && !textarea.value) {
+            textarea.value = savedContent;
+        }
+        
+        // Auto-save on input
+        let saveTimeout;
+        textarea.addEventListener('input', function() {
+            clearTimeout(saveTimeout);
+            saveTimeout = setTimeout(() => {
+                localStorage.setItem(storageKey, this.value);
+                showToast('Draft auto-saved', 'info', 2000);
+            }, 1000);
+        });
+        
+        // Clear on form submission
+        textarea.closest('form').addEventListener('submit', () => {
+            localStorage.removeItem(storageKey);
+        });
+    });
+    
+    // Enhanced Keyboard Navigation
+    document.addEventListener('keydown', function(e) {
+        // Escape key to close modals/toasts
+        if (e.key === 'Escape') {
+            const toast = document.querySelector('.message-toast');
+            if (toast) {
+                toast.remove();
+            }
+        }
+        
+        // Tab navigation enhancement
+        if (e.key === 'Tab') {
+            document.body.classList.add('keyboard-nav');
+        }
+    });
+    
+    document.addEventListener('mousedown', function() {
+        document.body.classList.remove('keyboard-nav');
+    });
+    
+    // Performance: Lazy loading for images
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+    
+    // Location Detection (with user permission)
+    if ('geolocation' in navigator) {
+        const locationInputs = document.querySelectorAll('input[name*="location"], input[name*="address"]');
+        if (locationInputs.length > 0) {
+            navigator.geolocation.getCurrentPosition(
+                position => {
+                    // Could reverse geocode to get address
+                    console.log('Location detected:', position.coords);
+                },
+                error => {
+                    console.log('Location access denied:', error);
+                }
+            );
+        }
+    }
+    
+    // Enhanced Error Recovery
+    window.addEventListener('error', function(e) {
+        console.error('JavaScript error:', e.error);
+        showToast('Something went wrong. Please refresh the page.', 'error');
+    });
+    
+    window.addEventListener('unhandledrejection', function(e) {
+        console.error('Unhandled promise rejection:', e.reason);
+        showToast('A network error occurred. Please try again.', 'error');
+    });
+});
+
 // PWA Service Worker Registration
 document.addEventListener('DOMContentLoaded', function() {
     // Register service worker
